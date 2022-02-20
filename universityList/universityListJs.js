@@ -8,6 +8,7 @@ function startSearch(){
     .then(universityData =>{
         console.log(universityData);
         for(var i = 0; i<200; i++){
+            /** you can add "universityData.length" instead of 200 for getting array length */
 
             const nameOfUniversity = universityData[i].name;
             const provinceOfUniversity = universityData[i]["state-province"];
