@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/83937e6d86.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+        integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./convertorStyle.css">
+    <!-- Scripts -->
+    <script src="./tempConvertorJs.js"></script>
+    <script src="./lengthConvertorJs.js"></script>
+    <script src="./timeConvertorJs.js"></script>
+    <script src="./speedConvertorJs.js"></script>
+    <title>Convertor</title>
+</head>
+
+<body>
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-arrow-through-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l3.103-3.104a.5.5 0 1 1 .708.708L4.5 12.207V14a.5.5 0 0 1-.146.354l-1.5 1.5ZM16 3.5a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182A23.825 23.825 0 0 1 5.8 12.323L8.31 9.81a1.5 1.5 0 0 0-2.122-2.122L3.657 10.22a8.827 8.827 0 0 1-1.039-1.57c-.798-1.576-.775-2.997-.213-4.093C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3Z" />
+                </svg>
+                Mad-Tools
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../calculator/calculatorIndex.html">Calculator</a></li>
+                            <li><a class="dropdown-item" href="./convertorIndex.html">Convertor</a></li>
+                            <li><a class="dropdown-item" href="../universityList/universityListIndex.html">Univercity List</a></li>
+                            <!--
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br><br>
+
+    <!-- Temperature Convertor -->
+    <form id="tempForm">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="ms-3 border border-warning rounded-2">
+                    <div class="row">
+                        <div class="col-md-6 m-3">
+                            <h3 class="badge bg-warning">Temperature Convertor</h3>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" id="inputValueT" class="border border-warning rounded-2" placeholder="Enter temperature here...">
+                                <select id="inputTypeT" class="input-group-text border border-warning">
+                                    <option value="InputDegreeCelsius">&#8451;</option>
+                                    <option value="InputDegreeFahrenheit">&#8457;</option>
+                                    <option value="InputKelvin">&#8490;</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text border border-warning">Convert To</span>
+                                <select id="outputTypeT" class="input-group-text border border-warning">
+                                    <option value="OutputDegreeCelsius">&#8451;</option>
+                                    <option value="OutputDegreeFahrenheit">&#8457;</option>
+                                    <option value="OutputKelvin">&#8490;</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <p>
+                                <input type="button" value="Convert" class="btn btn-outline-warning" onclick="convertTemperature()">
+                                <input type="button" value="Reset" class="btn btn-outline-warning" onclick="resetMyTemperatureForm()">
+                            </p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4 m-3">
+                            <br><br><br>
+                            <h5 id="printResultTemp"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+    <br><br><br>
+
+    <!-- Length Convertor -->
+    <form id="lengthForm">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="ms-3 border border-primary rounded-2">
+                    <div class="row">
+                        <div class="col-md-6 m-3">
+                            <h3 class="badge bg-primary">Length Convertor</h3>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" id="inputValueL" class="border border-primary rounded-2" placeholder="Enter length here...">
+                                <select id="inputTypeL" class="input-group-text border border-primary text-start">
+                                    <option value="InputKilometer">Kilometer</option>
+                                    <option value="InputMeter">Meter</option>
+                                    <option value="InputCentimeter">Centimeter</option>
+                                    <option value="InputMillimeter">Millimeter</option>
+                                    <option value="InputMicrometer">Micrometer</option>
+                                    <option value="InputNanometer">Nanometer</option>
+                                    <option value="InputMile">Mile</option>
+                                    <option value="InputYard">Yard</option>
+                                    <option value="InputFoot">Foot</option>
+                                    <option value="InputInch">Inch</option>
+                                    <option value="InputNauticalMile">Nautical Mile</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text border border-primary">Convert To</span>
+                                <select id="outputTypeL" class="input-group-text border border-primary text-start">
+                                    <option value="OutputKilometer">Kilometer</option>
+                                    <option value="OutputMeter">Meter</option>
+                                    <option value="OutputCentimeter">Centimeter</option>
+                                    <option value="OutputMillimeter">Millimeter</option>
+                                    <option value="OutputMicrometer">Micrometer</option>
+                                    <option value="OutputNanometer">Nanometer</option>
+                                    <option value="OutputMile">Mile</option>
+                                    <option value="OutputYard">Yard</option>
+                                    <option value="OutputFoot">Foot</option>
+                                    <option value="OutputInch">Inch</option>
+                                    <option value="OutputNauticalMile">Nautical Mile</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <p>
+                                <input type="button" value="Convert" class="btn btn-outline-primary" onclick="convertLength()">
+                                <input type="button" value="Reset" class="btn btn-outline-primary" onclick="resetMyLengthForm()">
+                            </p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4 m-3">
+                            <br><br><br>
+                            <h5 id="printResultLength"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+    <br><br><br>
+
+    <!-- Time Convertor -->
+    <form id="timeForm">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="ms-3 border border-success rounded-2">
+                    <div class="row">
+                        <div class="col-md-6 m-3">
+                            <h3 class="badge bg-success">Time Convertor</h3>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" id="inputValueTime" class="border border-success rounded-2"
+                                    placeholder="Enter time here...">
+                                <select id="inputTypeTime" class="input-group-text border border-success text-start">
+                                    <option value="InputNanosecond">Nanosecond</option>
+                                    <option value="InputMicrosecond">Microsecond</option>
+                                    <option value="InputMillisecond">Millisecond</option>
+                                    <option value="InputSecond">Second</option>
+                                    <option value="InputMinute">Minute</option>
+                                    <option value="InputHour">Hour</option>
+                                    <option value="InputDay">Day</option>
+                                    <option value="InputWeek">Week</option>
+                                    <option value="InputMonth">Month</option>
+                                    <option value="InputCalenderYear">Calender year</option>
+                                    <option value="InputDecade">Decade</option>
+                                    <option value="InputCentury">Century</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text border border-success">Convert To</span>
+                                <select id="outputTypeTime" class="input-group-text border border-success text-start">
+                                    <option value="OutputNanosecond">Nanosecond</option>
+                                    <option value="OutputMicrosecond">Microsecond</option>
+                                    <option value="OutputMillisecond">Millisecond</option>
+                                    <option value="OutputSecond">Second</option>
+                                    <option value="OutputMinute">Minute</option>
+                                    <option value="OutputHour">Hour</option>
+                                    <option value="OutputDay">Day</option>
+                                    <option value="OutputWeek">Week</option>
+                                    <option value="OutputMonth">Month</option>
+                                    <option value="OutputCalenderYear">Calender year</option>
+                                    <option value="OutputDecade">Decade</option>
+                                    <option value="OutputCentury">Century</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <p> 
+                                <input type="button" value="Convert" class="btn btn-outline-success" onclick="convertTime()">
+                                <input type="button" value="Reset" class="btn btn-outline-success" onclick="resetMyTimeForm()">
+                            </p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4 m-3">
+                            <br><br><br>
+                            <h5 id="printResultTime"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+    <br><br><br>
+
+    <!-- Speed Convertor -->
+
+    <form id="speedForm">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="ms-3 border border-danger rounded-2">
+                    <div class="row">
+                        <div class="col-md-6 m-3">
+                            <h3 class="badge bg-danger">Speed Convertor</h3>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" id="inputValueSpeed" class="border border-danger rounded-2"
+                                    placeholder="Enter speed here...">
+                                <select id="inputTypeSpeed" class="input-group-text border border-danger text-start">
+                                    <option value="InputMilesPerHour">Miles per Hour</option>
+                                    <option value="InputFootPerSecond">Foot per Second</option>
+                                    <option value="InputMeterPerSecond">Meter per Second</option>
+                                    <option value="InputKilometerPerHour">Kilometer per Hour</option>
+                                    <option value="InputKnot">Knot</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-text border border-danger">Convert To</span>
+                                <select id="outputTypeSpeed" class="input-group-text border border-danger text-start">
+                                    <option value="OutputMilesPerHour">Miles per Hour</option>
+                                    <option value="OutputFootPerSecond">Foot per Second</option>
+                                    <option value="OutputMeterPerSecond">Meter per Second</option>
+                                    <option value="OutputKilometerPerHour">Kilometer per Hour</option>
+                                    <option value="OutputKnot">Knot</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <p>
+                                <input type="button" value="Convert" class="btn btn-outline-danger" onclick="convertSpeed()">
+                                <input type="button" value="Reset" class="btn btn-outline-danger"  onclick="resetMySpeedForm()">
+                            </p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-4 m-3">
+                            <br><br><br>
+                            <h5 id="printResultSpeed"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </form>
+    <br><br><br>
+
+
+
+
+
+
+
+
+    <div id="demo143"></div>
+</body>
+
+</html>
